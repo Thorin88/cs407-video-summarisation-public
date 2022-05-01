@@ -8,7 +8,7 @@ This file will indicate the general layout of the repository, where to find key 
 
 Contains our code for the web-based UI. `static/`, `templates/` and `main.py` make up the code for the web-based UI.
 
-The `2FPS_Videos` directory contains 2FPS versions of the original SumMe and TVSum Datasets. These videos are **not** the datasets our models train and evaluate on, we use a preprocessed dataset. These videos are included to offer the option of demonstrating raw, batch feature extraction using our code, as well as a bank of videos that the user could test our inference code on.
+The `2FPS_Videos` directory contains 2FPS versions of the original SumMe and TVSum Datasets. These videos are **not** the datasets our models train and evaluate on, we use a preprocessed dataset. These videos are included to offer the option of demonstrating raw, batch feature extraction using our code, as well as a bank of videos that the user could test our inference code on. When using the UI, please either use your own videos, or use the example videos in `frontend/backend/pipeline/custom_data/`. The videos in `2FPS_Videos/` **should not** be given as input to our UI as they are downsampled to 2FPS. This is explained more in the "Using the UI" section of `USER_GUIDE.md`.
 
 ### `frontend/backend/` ###
 

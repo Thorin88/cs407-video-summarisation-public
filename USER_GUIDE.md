@@ -40,6 +40,8 @@ You can also change the model which is summarising your video by changing the pi
 
 As an example, the default UI options (shown in the image above) will use our single model pipeline that was trained on the SumMe Conical Setting to summarise any videos which are uploaded.
 
+When using the UI, please either use your own videos, or use the example videos in `frontend/backend/pipeline/custom_data/`. The videos in `2FPS_Videos/` **should not** be given as input to our UI as they are downsampled to 2FPS. Our UI works best when given non-downsampled videos, whereas our command line inference code, covered in section "Video Summarisation via the command line" of this guide, can support being given downsampled videos if `--sample-rate` is set to 1. If our UI is given 2FPS videos, the summaries are likely to be very short, since the input video itself is very short.
+
 Note that sometimes the UI state can become de-synced with the application variables. This can occur if you reset the cache of the web page without restarting the application. This can be fixed by either restarting the app or clicking each of the three parameter options at lease once.
 
 ## Training models

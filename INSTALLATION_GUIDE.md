@@ -34,7 +34,7 @@ The python packages this command puts on PATH should cover most of the packages 
 
 Next we want to check if torch and torchvision are installed. If you already know these are installed, you can skip to step to the "Downloading the Datasets" section.
 
-3) Run `python3 -m pip show torchvision`. If you do not see a warning about this module not being found, then all the required python packages are now installed. Otherwise, continue to step 4.
+3) Run `python3 -m pip show torchvision`. If you do not see any output or if you see a warning about this module not being found, then continue to step 4. Otherwise, all the required python packages are now installed, and you can move onto the next section.
 
 4) Run `python3 -m pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html`. This should install torch and torchvision.
 
