@@ -1,0 +1,39 @@
+*
+*/
+!.gitignore
+
+# Including weights for 1 split for each possible model
+
+# Single model pipeline pretrained
+!summe.yml.0.pt
+!summe_aug.yml.0.pt
+!summe_trans.yml.0.pt
+
+!tvsum.yml.0.pt
+!tvsum_aug.yml.0.pt
+!tvsum_trans.yml.0.pt
+
+# Multi model pipeline pretrained
+!summe_multi_0.0.pt
+!summe_multi_1.0.pt
+!summe_clusterer.0.pt
+
+!summe_aug_multi_0.0.pt
+!summe_aug_multi_1.0.pt
+!summe_aug_clusterer.0.pt
+
+!summe_trans_multi_0.0.pt
+!summe_trans_multi_1.0.pt
+!summe_trans_clusterer.0.pt
+
+!tvsum_multi_0.0.pt
+!tvsum_multi_1.0.pt
+!tvsum_clusterer.0.pt
+
+!tvsum_aug_multi_0.0.pt
+!tvsum_aug_multi_1.0.pt
+!tvsum_aug_clusterer.0.pt
+
+!tvsum_trans_multi_0.0.pt
+!tvsum_trans_multi_1.0.pt
+!tvsum_trans_clusterer.0.pt

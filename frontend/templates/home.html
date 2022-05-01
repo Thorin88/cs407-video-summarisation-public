@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='basic.css')}}">
+
+    <script>
+      function multipleClicked(){
+        document.getElementById("cb-single").checked = false;
+        document.getElementById("cb-multiple").checked = true;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/pipeline-multiple");
+        xhr.send()
+
+      }
+      function singleClicked(){
+        document.getElementById("cb-multiple").checked = false;
+        document.getElementById("cb-single").checked = true;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/pipeline-single");
+        xhr.send()
+
+      }
+      function sumMeClicked(){
+        document.getElementById("cb-tvsum").checked = false;
+        document.getElementById("cb-summe").checked = true;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/dataset-summe");
+        xhr.send()
+
+      }
+      function tvSumClicked(){
+        document.getElementById("cb-summe").checked = false;
+        document.getElementById("cb-tvsum").checked = true;
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/dataset-tvsum");
+        xhr.send()
+
+      }
+      function canonicalClicked(){
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/setting-canonical");
+        xhr.send()
+      }
+      function augmentedClicked(){
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/setting-augmented");
+        xhr.send()
+      }
+      function transferClicked(){
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "/setting-transfer");
+        xhr.send()
+      }
+    </script>
+</head>
+
+<body>
+    <div class="fond">
+        <div>
+
+            <h1>Video Summarizer</h1>
+
+
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" class="input-blue formbtn" name='video' id='file' accept="video/mp4,video/mov,video/*">
+                <label for="file" class="label-blue formbtn"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path
+                            d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+                    </svg>Choose a video</label>
+                <button type="submit" id='formbtn'>Upload</button>
+            </form>
+
+            <div>
+              <div class='settings'>
+                <h2>Pipeline Select</h2>
+
+                <label class="container" onclick="singleClicked()">Single
+                <input type="checkbox" id='cb-single' checked="checked">
+                <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Multiple
+                  <input type="checkbox" id='cb-multiple' onclick="multipleClicked()">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="settings">
+                <h2>Evaluation Setting</h2>
+                <div class="box" style="width:200px;">
+                  <select>
+                    <option onclick="canonicalClicked()">Canonical</option>
+                    <option onclick="augmentedClicked()">Augmented</option>
+                    <option onclick="transferClicked()">Transfer</option>
+                  </select>
+                </div>
+              </div>
+              <div class='settings'>
+                <h2>Dataset</h2>
+
+                <label class="container" onclick="sumMeClicked()">SumMe
+                <input type="checkbox" id='cb-summe' checked="checked">
+                <span class="checkmark"></span>
+                </label>
+
+                <label class="container">TVSum
+                  <input type="checkbox" id='cb-tvsum' onclick="tvSumClicked()">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <p>{{value1}}</p>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

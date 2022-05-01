@@ -1,0 +1,25 @@
+- test_keys:
+  - ..\custom_data\custom_dataset.h5\video_1
+  train_keys:
+  - ..\custom_data\custom_dataset.h5\video_0
+  - ..\custom_data\custom_dataset.h5\video_2
+- test_keys:
+  - ..\custom_data\custom_dataset.h5\video_1
+  train_keys:
+  - ..\custom_data\custom_dataset.h5\video_0
+  - ..\custom_data\custom_dataset.h5\video_2
+- test_keys:
+  - ..\custom_data\custom_dataset.h5\video_0
+  train_keys:
+  - ..\custom_data\custom_dataset.h5\video_2
+  - ..\custom_data\custom_dataset.h5\video_1
+- test_keys:
+  - ..\custom_data\custom_dataset.h5\video_2
+  train_keys:
+  - ..\custom_data\custom_dataset.h5\video_0
+  - ..\custom_data\custom_dataset.h5\video_1
+- test_keys:
+  - ..\custom_data\custom_dataset.h5\video_0
+  train_keys:
+  - ..\custom_data\custom_dataset.h5\video_2
+  - ..\custom_data\custom_dataset.h5\video_1
