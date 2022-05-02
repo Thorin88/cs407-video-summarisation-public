@@ -97,4 +97,4 @@ You should now be able to begin running the code. You will not need to complete 
 
 If you receive any errors regarding `torch` or `torchvision`, including when running the code, then there may be issues with version compatibility. To try and resolve this, first use `python3 -m pip uninstall torch` and `python3 -m pip uninstall torchvision`. Then run `python3 -m pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html`. This command installs a specific version of these libraries which we know to work on DCS.
 
-Another instance of issues with version mismatched can occur when your scikit-learn package is a different version to the one required. The
+Another instance of issues with versions can occur when your scikit-learn package is a different version to the one required. This will probably appear in errors relating to model classes not having attributes they should have. This should not occur if you remember to use `module load cs342-python` each time you open a new terminal shell, which will use the version of scikit-learn that we use; version 0.21.3.
