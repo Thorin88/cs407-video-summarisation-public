@@ -12,7 +12,7 @@ First, start by cloning the repository to your system. You can skip this step if
 
 1) Run `git clone https://github.com/Thorin88/cs407-video-summarisation-public.git` in the directory you want the code to be downloaded to.
 
-For the next sections, it is important that you ensure you complete the steps that involve running `module load cs342-python`. This ensures we do not end up with version conflicts for the packages we will be installing. It is also important to note our use of `python3`, not `python`, when invoking commands involving python.
+For the next sections, it is important that you ensure you complete the steps that involve running `module load cs342-python`. This line needs to be run each time you use a new terminal/console instance. This ensures we do not end up with version conflicts for the packages we will be installing. It is also important to note our use of `python3`, not `python`, when invoking commands involving python.
 
 ### Installing Flask
 
@@ -96,3 +96,5 @@ You should now be able to begin running the code. You will not need to complete 
 ### Help/Debugging
 
 If you receive any errors regarding `torch` or `torchvision`, including when running the code, then there may be issues with version compatibility. To try and resolve this, first use `python3 -m pip uninstall torch` and `python3 -m pip uninstall torchvision`. Then run `python3 -m pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html`. This command installs a specific version of these libraries which we know to work on DCS.
+
+Another instance of issues with version mismatched can occur when your scikit-learn package is a different version to the one required. The

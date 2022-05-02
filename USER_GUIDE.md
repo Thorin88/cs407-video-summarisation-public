@@ -8,6 +8,8 @@ Some of our pretrained models will come with the code, enough for our video summ
 
 However, `frontend/backend/pipeline/src/train_notebook.ipynb` can be used to train up/retrain our models on the evaluation settings we mention in our report. Not all pretrained models were uploaded to Github to save space, and because our UI does not use models from all splits. However, the tabula submitted code contains all pretrained models. How to use `train_notebook.ipynb` will be covered in section **"Training models"** of this document. These models can then be used for video summarisation using our web based UI, or our command line based video summarisation.
 
+Also, as mentioned in the installation guide, it is important that you ensure you complete the steps that involve running `module load cs342-python` and `module load cuda11.2`. This line needs to be run each time you use a new terminal/console instance.
+
 ## Starting the UI
 
 1) Log into a DCS machine or a remote-xx node (with some kind of VNC Viewer).
@@ -139,6 +141,8 @@ Alternatively, this command supports extracting features for a batch of videos v
 `python3 pipeline/src/extract_features.py feat-anchor-free --ckpt-path pipeline/pretrained_models/pretrain_af_basic/checkpoint/tvsum.yml.0.pt --source ./dsnet_feature_extraction/SumMe.txt --save-path ./dsnet_feature_extraction/features/2D/SumMe --nms-thresh 0.4 --sample-rate 1 --batchExtract True --featureFormat avg2D`
 
 The main points to note are the addition of the `--batchExtract True` parameter, as well as the `--source` now being a text file. This text file simply needs to contain a list of relateive file paths to the videos to extract features for.
+
+These features, saved in the `--save-path` directory you provide the command, can then be loaded into NumPy arrays and used for your own models/purposes.
 
 ## Video Summarisation via the command line
 
