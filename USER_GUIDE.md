@@ -16,7 +16,7 @@ However, `frontend/backend/pipeline/src/train_notebook.ipynb` can be used to tra
 
 3) If you are on a **remote-xx node**, ssh into cobra using: `ssh -L5000:localhost:5000 u[yourIDHere]@cobra-01.dcs.warwick.ac.uk`.
 
-This will allow us to run the frontend on cobra, allowing us to use CUDA. We are forwarding port 5000 so that we can view the UI on the remote-xx node, since cobra does not have a GUI. In-person DCS machines have CUDA available, so we do not need to do any of these ssh steps.
+This will allow us to run the frontend on cobra, allowing us to use CUDA. We are forwarding port 5000 so that we can view the UI on the remote-xx node, since cobra does not have a GUI. In-person DCS machines have CUDA available, so we do not need to do any of these ssh steps. However you can still run the code in this way if you like, even if you are using an in-person DCS machine.
 
 4) Run `module load cs342-python`.
 
@@ -58,7 +58,7 @@ To use the notebook, follow the steps below. The steps are very similar to the s
 
 3) If you are on a **remote-xx node**, ssh into cobra using: `ssh -L8888:localhost:8888 u[yourIDHere]@cobra-01.dcs.warwick.ac.uk`.
 
-This will allow us to run the notebook code on cobra, allowing us to use CUDA. We can then view the notebook on the remote-node, using our forwarded port, since cobra does not have a GUI. In-person DCS machines have CUDA available, so we do not need to do any of these ssh steps.
+This will allow us to run the notebook code on cobra, allowing us to use CUDA. We can then view the notebook on the remote-node, using our forwarded port, since cobra does not have a GUI. In-person DCS machines have CUDA available, so we do not need to do any of these ssh steps. However you can still run the code in this way if you like, even if you are using an in-person DCS machine.
 
 4) Run `module load cs342-python`.
 
@@ -150,7 +150,7 @@ Our web-based UI invokes a call to `my_infer.py`, however this can also be invok
 
 `python3 backend/pipeline/src/my_infer.py basic --ckpt-path ./backend/pipeline/models/ab_basic/checkpoint/summe.yml.0.pt --source ./backend/pipeline/custom_data/videos/EE-bNr36nyA.mp4 --save-path ./output.webm --sample-rate 15 --pipeline-mode multi`
 
-Like the UI, this command supports the use of both the single and multi model pipeline, specified via the --pipeline-mode parameter (single or multi). You can also specify the evaluation setting the model was trained on by altering the `--ckpt-path` arguement. You can chose from `summe.yml.0.pt`, `summe_aug.yml.0.pt`, `summe_trans.yml.0.pt`, `tvsum.yml.0.pt`, `tvsum_aug.yml.0.pt`, `tvsum_trans.yml.0.pt`. The 0.pt specifies which of the 5 cross validation splits to use, which can take a value from 0 to 4.
+Like the UI, this command supports the use of both the single and multi model pipeline, specified via the `--pipeline-mode` parameter (single or multi). You can also specify the evaluation setting the model was trained on by altering the `--ckpt-path` arguement. You can chose from `summe.yml.0.pt`, `summe_aug.yml.0.pt`, `summe_trans.yml.0.pt`, `tvsum.yml.0.pt`, `tvsum_aug.yml.0.pt`, `tvsum_trans.yml.0.pt`. The 0.pt specifies which of the 5 cross validation splits to use, which can take a value from 0 to 4.
 
 ## Training Auto Encoders
 

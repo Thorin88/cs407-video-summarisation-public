@@ -20,7 +20,7 @@ First we start by installing Flask. This is slightly more fiddly than usual due 
 
 1) In a terminal, run `module load cs342-python`.
 
-2) Run `python3 -m pip show flask`. If `flask` is not installed, skip to the next step. Else, if the version shown is anything above 1.1.4, you'll need to downgrade or uninstall flask. You can uninstall `flask` using `python3 -m pip uninstall flask.`
+2) Run `python3 -m pip show flask`. If `flask` is not installed, with this command showing no output or showing warnings, skip to the next step. Else, if the version shown is anything above 1.1.4, you'll need to downgrade or uninstall flask. You can uninstall `flask` using `python3 -m pip uninstall flask.`
 
 3) Run `python3 -m pip install flask==1.1.4`, which should install Flask
 
